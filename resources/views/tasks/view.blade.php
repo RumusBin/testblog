@@ -20,6 +20,9 @@
                     <a  href="/">
                        <button class="btn btn-success">Back</button>
                     </a>
+                    <a href="{{route('task.edit', $task->id)}}">
+                        <button class="btn btn-warning">Edit</button>
+                    </a>
                 </div>
 
 

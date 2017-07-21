@@ -30,7 +30,7 @@
                             <a href="{{route('task.edit', $task->id)}}">
                                 <i class="glyphicon glyphicon-edit"></i>
                             </a>
-                            <a href="#">
+                            <a href="{{route('task.delete', $task->id)}}" onclick="return confirm('Are you sure?')">
                                 <i class="glyphicon glyphicon-remove"></i>
                             </a>
                         </td>

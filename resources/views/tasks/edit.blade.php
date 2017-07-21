@@ -18,7 +18,11 @@
                 </div>
 
                 {!! Form::close() !!}
+                <a  href="/">
+                    <button class="btn btn-success">Cancel</button>
+                </a>
             </div>
+
 
         </div>
     </div>
