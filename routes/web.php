@@ -16,4 +16,5 @@ Route::get('/tasks/create', 'TaskController@create')->name('task.create');
 Route::post('/tasks/store', 'TaskController@store')->name('task.store');
 Route::get('/tasks/view/{id}', 'TaskController@view')->name('task.view');
 Route::get('/tasks/edit/{id}', 'TaskController@edit')->name('task.edit');
-Route::post('/tasks/update/{id}', 'TaskController@update')->name('task.update');
+Route::put('/tasks/update/{id}', 'TaskController@update')->name('task.update');
+Route::post('/tasks/delete/{id}', 'TaskController@delete')->name('task.delete');

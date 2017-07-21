@@ -24,10 +24,10 @@
                         <td>{{$task->id}}</td>
                         <td>{{$task->title}}</td>
                         <td>
-                            <a href="{{route('/task.view', $task->id)}}">
+                            <a href="{{route('task.view', $task->id)}}">
                                 <i class="glyphicon glyphicon-eye-open"></i>
                             </a>
-                            <a href="{{route('/task.edit', $task->id)}}">
+                            <a href="{{route('task.edit', $task->id)}}">
                                 <i class="glyphicon glyphicon-edit"></i>
                             </a>
                             <a href="#">
