@@ -4,14 +4,15 @@
     <div class="container">
 
         <h3>Create tasks</h3>
+     @include('errors')
         <div class="row">
 
             <div class="col-md-12">
-                {!! Form::open(['route'=>['tasks.store']])!!}
+                {!! Form::open(['route'=>['task.store']])!!}
                 <div class="form-group">
-                    <input type="text" class="form-control" name="title">
+                    <input type="text" class="form-control" name="title" value={{old('title')}}>
                     <br>
-                    <textarea name="description" id="" cols="30" rows="30" class="form-control"></textarea>
+                    <textarea name="content" id="" cols="30" rows="30" class="form-control">{{old('content')}}</textarea>
                     <br>
                     <button class="btn btn-success">Submit</button>
                 </div>
