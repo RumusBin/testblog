@@ -5,20 +5,25 @@
 
         <h3>Create tasks</h3>
      @include('errors')
+
         <div class="row">
 
             <div class="col-md-12">
-                {!! Form::open(['route'=>['task.store']])!!}
+
                 <div class="form-group">
-                    <input type="text" class="form-control" name="title" value={{old('title')}}>
+                    <form method="post" action="/tasks/store" >
+                        <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+                   Title:  <input type="text" class="form-control" name="title" value="">
                     <br>
-                    <textarea name="content" id="" cols="30" rows="30" class="form-control">{{old('content')}}</textarea>
+                   Content article:  <textarea name="content" id="mytextarea" cols="30" rows="30" class="form-control"></textarea>
                     <br>
                     <button class="btn btn-success">Submit</button>
+                    </form>
                 </div>
 
-                {!! Form::close() !!}
+
             </div>
+
 
         </div>
     </div>

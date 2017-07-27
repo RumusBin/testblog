@@ -12,9 +12,9 @@
                 <div class="form-group">
                     <h2>{{$task->title}}</h2>
                     <br>
-                    <div><p>
-                            {{$task->content}}
-                        </p>
+
+                        {{ $task->content }}
+
                     </div>
                     <br>
                     <a  href="/">

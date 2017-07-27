@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests\createTaskRequest;
+use App\Mail\TestMail;
 use App\Task;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Request;
 
 class TaskController extends Controller
@@ -19,6 +21,7 @@ class TaskController extends Controller
 
     public function create()
     {
+
         return view('tasks.create');
     }
 
@@ -28,6 +31,7 @@ class TaskController extends Controller
         $task = new Task;
         $task->fill($request->all());
         $task->save();
+        Mail::to('komlikov.r@gmail.com', 'Hello from me')->send(new TestMail($task));
 
         return redirect()->route('task.index');
     }
